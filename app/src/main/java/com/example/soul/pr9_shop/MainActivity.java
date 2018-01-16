@@ -19,7 +19,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    // TODO limpiar esta clase
+    // TODO crear clase de BBDD
+    // TODO crear cartActivity
+    // TODO visualizar todos los datos.
+    // TODO mostrar icono que lleve al carrito de la compra
+    // TODO btn de compra en la actividad cart
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
