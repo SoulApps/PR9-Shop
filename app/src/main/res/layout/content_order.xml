@@ -26,7 +26,8 @@
         app:layout_constraintBottom_toTopOf="@+id/activity_order_horizontalGuide"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/activity_order_product" />
 
     <TextView
         android:id="@+id/activity_order_lblTotal"
@@ -34,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:text="@string/Total"
         android:textColor="@color/colorPrimaryDark"
@@ -70,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginTop="8dp"
         android:text="@string/activity_order_lblCurrencyText"
         android:textAlignment="viewStart"
@@ -93,7 +94,7 @@
         android:background="@drawable/btn_order"
         android:text="@string/activity_order_btnConfirmOrderText"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/btnTextColor"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
