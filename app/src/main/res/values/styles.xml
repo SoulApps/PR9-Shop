@@ -1,20 +1,26 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- Tema de la aplicación. Debe heredar de Theme.AppCompat -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        <!-- Color de la ActionBar -->
         <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- Color de la barra de notificaciones -->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- Color de acento (contraste) -->
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Tema para las actividades que van a usar Toolbar -->
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <!-- Estilo para que la toolbar se muestre oscura -->
+    <style name="AppTheme.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!-- Estilo para que el menú de overflow en la toolbar se muestre claro -->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
 </resources>

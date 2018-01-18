@@ -1,4 +1,4 @@
-package com.example.soul.pr9_shop;
+package com.example.soul.pr9_shop.ui.main;
 
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,7 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.widget.TextView;
+import com.example.soul.pr9_shop.R;
 
 public class MainActivity extends AppCompatActivity {
     // TODO limpiar esta clase
@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     // TODO visualizar todos los datos.
     // TODO mostrar icono que lleve al carrito de la compra
     // TODO btn de compra en la actividad cart
+    // TODO crear BBDD
+    // TODO mostrar productos
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = (ViewPager) findViewById(R.id.activity_main_vpContainer);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -117,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_product, container, false);
+            View rootView = inflater.inflate(R.layout.activity_main_page, container, false);
             return rootView;
         }
     }
