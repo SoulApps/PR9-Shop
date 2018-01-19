@@ -1,7 +1,9 @@
 package com.example.soul.pr9_shop.ui.main;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.os.Parcelable;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -14,6 +16,11 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.example.soul.pr9_shop.R;
+import com.example.soul.pr9_shop.data.Database;
+import com.example.soul.pr9_shop.data.Repository;
+import com.example.soul.pr9_shop.data.RepositoryImpl;
+import com.example.soul.pr9_shop.data.model.Product;
+import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,11 +48,13 @@ public class MainActivityAdapter extends PagerAdapter {
     private final LayoutInflater mLayoutInflater;
     private ViewPager viewPager;
     private static final int NUMBER_OF_PAGES = 5;
+    private Repository repository;
 
-
-    public MainActivityAdapter(Context context, ViewPager viewPager) {
+    public MainActivityAdapter(Context context, ViewPager viewPager, Repository mRepository) {
         mLayoutInflater = LayoutInflater.from(context);
         this.viewPager = viewPager;
+        this.repository = mRepository;
+
     }
 
     @Override
@@ -63,8 +72,17 @@ public class MainActivityAdapter extends PagerAdapter {
     }
 
     private void setupPage(View view, int position) {
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
         mainPageCircleIndicator.setViewPager(viewPager);
+        // Obtain the current item (same that the item on the viewPager -1)
+        Product product = repository.getProduct((position - 1));
+        // Inflate the layout
+        // Image with Picasso
+        Picasso.with(view.getContext()).load(product.getImage()).into(mainPageImgProduct);
+        mainPageProductTitle.setText(product.getProductName());
+        mainPagePrice.setText(String.valueOf(product.getPrice()));
+        mainPageRatingBar.setRating(product.getRating());
+        mainPageProductManufacturer.setText(product.getProductManufacturer());
     }
 
     private void show(View view, int position) {
