@@ -10,11 +10,6 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!-- Tema para las actividades que van a usar Toolbar -->
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
 
     <!-- Estilo para que la toolbar se muestre oscura -->
     <style name="AppTheme.AppBarOverlay"
