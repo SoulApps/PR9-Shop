@@ -18,7 +18,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background"
             app:layout_constraintBottom_toTopOf="@+id/activity_main_page_imageGuideLane"
-            app:layout_constraintDimensionRatio="h,16:9"
+            app:layout_constraintDimensionRatio=",16:9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.4" />
+            app:layout_constraintGuide_percent="0.45" />
 
         <TextView
             android:id="@+id/activity_main_page_lblProductTitle"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="sans-serif"
             android:textAlignment="center"
             android:textAllCaps="false"
@@ -52,10 +52,10 @@
         <TextView
             android:id="@+id/activity_main_page_lblProductManufacturer"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintBottom_toTopOf="@+id/activity_main_page_lblPriceTopSeparator"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -88,59 +88,43 @@
             android:id="@+id/activity_main_page_lblPrice"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="16dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
             android:gravity="center"
-            android:textAlignment="textEnd"
-            android:textAppearance="@android:style/TextAppearance.Material.Body1"
-            android:textColor="@color/colorAccent"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/activity_main_page_lblPriceBottomSeparator"
-            app:layout_constraintEnd_toStartOf="@+id/activity_main_page_lblCurrency"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/activity_main_page_lblPriceTopSeparator"
-            tools:ignore="RtlCompat"
-            tools:text="30" />
-
-        <TextView
-            android:id="@+id/activity_main_page_lblCurrency"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="€"
-            android:textAlignment="viewStart"
             android:textAppearance="@android:style/TextAppearance.Material.Body1"
             android:textColor="@color/colorAccent"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/activity_main_page_lblPriceBottomSeparator"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/activity_main_page_lblPrice"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/activity_main_page_lblPriceTopSeparator"
-            tools:text="€" />
+            tools:ignore="RtlCompat"
+            tools:text="140,50€" />
 
         <android.support.constraint.Guideline
             android:id="@+id/activity_main_page_lblPriceBottomSeparator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.85" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.85"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <me.relex.circleindicator.CircleIndicator
             android:id="@+id/activity_main_page_CircleIndicator"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             app:ci_drawable="@drawable/circle_indicator"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/activity_main_page_lblPriceBottomSeparator" />
 
     </android.support.constraint.ConstraintLayout>

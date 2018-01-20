@@ -1,5 +1,6 @@
 package com.example.soul.pr9_shop.data;
 
+import com.example.soul.pr9_shop.data.model.OrderProduct;
 import com.example.soul.pr9_shop.data.model.Product;
 import com.example.soul.pr9_shop.util.ProductUtils;
 
@@ -13,10 +14,12 @@ import java.util.List;
 public class Database {
     private static Database instance;
     private final List<Product> productList;
+    private final List<OrderProduct> orderList;
 
     private Database() {
         // Initial data.
         productList = ProductUtils.getProductList();
+        orderList = new ArrayList<>();
     }
 
     public static Database getInstance() {
@@ -24,6 +27,9 @@ public class Database {
             instance = new Database();
         }
         return instance;
+    }
+    public Product getProduct(int position) {
+        return productList.get(position);
     }
 
     public List<Product> getProducts() {
@@ -50,7 +56,38 @@ public class Database {
         }
     }
 
-    public Product getProduct(int position) {
-        return productList.get(position);
+    public OrderProduct getOrderProduct(int position) {
+        return orderList.get(position);
     }
+
+    public List<OrderProduct> getOrderList() {
+        return orderList;
+    }
+
+    public void addToOrder(OrderProduct orderProduct) {
+        orderList.add(orderProduct);
+    }
+
+    public void deleteFromOrder(int position) {
+        productList.remove(orderList);
+    }
+
+
+    public void clearOrderList() {
+        orderList.clear();
+    }
+
+    public void replaceOrderList(ArrayList<OrderProduct> newList) {
+        orderList.clear();
+        for (int i = 0; i < newList.size(); i++) {
+            orderList.add(newList.get(i));
+        }
+    }
+
+    public void updateQuantity (int index, int quantity){
+        orderList.get(index).setQuantity(quantity);
+    }
+
+
+
 }
