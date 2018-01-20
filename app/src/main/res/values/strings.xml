@@ -6,4 +6,5 @@
     <string name="Total">TextView</string>
     <string name="activity_order_lblCurrencyText">€</string>
     <string name="activity_order_btnConfirmOrderText">Confirm</string>
+    <string name="mnu_goToCartTitle">Go to cart</string>
 </resources>

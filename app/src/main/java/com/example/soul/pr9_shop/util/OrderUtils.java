@@ -24,7 +24,8 @@ public class OrderUtils {
                 // if product exists, set exists to true
                 orderProduct.setQuantity(orderProduct.getQuantity() +1);
                 exists = true;
-            }
+            }else
+                index++;
         }
         if(!exists){
             index = -1;

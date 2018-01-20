@@ -80,10 +80,10 @@ public class MainActivityAdapter extends PagerAdapter {
     }
 
     private void setupPage(View view, int position) {
-        ButterKnife.bind(this, view);
+        ButterKnife.bind(this,view);
         mainPageCircleIndicator.setViewPager(viewPager);
         // Obtain the current item (same that the item on the viewPager -1)
-        Product product = repository.getProduct(position);
+        final Product product = repository.getProduct(position);
         // Inflate the layout
         // Image with Picasso
         Picasso.with(view.getContext()).load(product.getImage()).into(mainPageImgProduct);
@@ -99,7 +99,6 @@ public class MainActivityAdapter extends PagerAdapter {
         Product product = repository.getProduct(viewPager.getCurrentItem());
         addToCart(product);
         Toast.makeText(context, String.format("Producto Agregado: %s", product.getProductName()), Toast.LENGTH_SHORT).show();
-        Log.d("ABBA", String.format("Producto Agregado: %s", product.getProductName()));
     }
 
     private void addToCart(Product product) {
@@ -121,6 +120,7 @@ public class MainActivityAdapter extends PagerAdapter {
                 repository.addToOrder(orderProduct);
             }
         }
+
     }
 
     @Override
