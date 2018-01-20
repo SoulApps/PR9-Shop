@@ -44,6 +44,8 @@ public class MainActivityAdapter extends PagerAdapter {
     TextView mainPagePrice;
     @BindView(R.id.activity_main_page_CircleIndicator)
     CircleIndicator mainPageCircleIndicator;
+    @BindView(R.id.activity_main_page_lblCurrency)
+    TextView mainPageCurrency;
 
     private final LayoutInflater mLayoutInflater;
     private ViewPager viewPager;
@@ -75,7 +77,7 @@ public class MainActivityAdapter extends PagerAdapter {
         ButterKnife.bind(this, view);
         mainPageCircleIndicator.setViewPager(viewPager);
         // Obtain the current item (same that the item on the viewPager -1)
-        Product product = repository.getProduct((position - 1));
+        Product product = repository.getProduct(position);
         // Inflate the layout
         // Image with Picasso
         Picasso.with(view.getContext()).load(product.getImage()).into(mainPageImgProduct);

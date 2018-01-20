@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initViews();
         initializeRepositories();
+        initViews();
     }
 
     private void initializeRepositories() {
