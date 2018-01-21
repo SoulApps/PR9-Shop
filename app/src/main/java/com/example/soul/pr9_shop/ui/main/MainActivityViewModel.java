@@ -2,11 +2,10 @@ package com.example.soul.pr9_shop.ui.main;
 
 import android.arch.lifecycle.ViewModel;
 
-import com.example.soul.pr9_shop.data.Repository;
+import com.example.soul.pr9_shop.data.local.Repository;
 import com.example.soul.pr9_shop.data.model.OrderProduct;
 import com.example.soul.pr9_shop.data.model.Product;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**

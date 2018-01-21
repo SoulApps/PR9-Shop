@@ -3,23 +3,20 @@ package com.example.soul.pr9_shop.ui.main;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.example.soul.pr9_shop.R;
-import com.example.soul.pr9_shop.data.Database;
-import com.example.soul.pr9_shop.data.Repository;
-import com.example.soul.pr9_shop.data.RepositoryImpl;
+import com.example.soul.pr9_shop.data.local.Database;
+import com.example.soul.pr9_shop.data.local.Repository;
+import com.example.soul.pr9_shop.data.local.RepositoryImpl;
 import com.example.soul.pr9_shop.ui.order.OrderActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         switch (item.getItemId()) {
             case R.id.mnu_goToCart:
                 startOrderActivity();

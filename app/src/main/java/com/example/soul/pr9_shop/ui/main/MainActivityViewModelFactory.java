@@ -3,7 +3,7 @@ package com.example.soul.pr9_shop.ui.main;
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 
-import com.example.soul.pr9_shop.data.Repository;
+import com.example.soul.pr9_shop.data.local.Repository;
 
 /**
  * Created by soul on 1/19/18.

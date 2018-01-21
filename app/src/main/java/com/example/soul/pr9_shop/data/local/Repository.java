@@ -1,4 +1,4 @@
-package com.example.soul.pr9_shop.data;
+package com.example.soul.pr9_shop.data.local;
 
 import com.example.soul.pr9_shop.data.model.OrderProduct;
 import com.example.soul.pr9_shop.data.model.Product;
@@ -33,7 +33,9 @@ public interface Repository {
 
     void setOrderList(ArrayList<OrderProduct> list);
 
-    void getOrderProduct(int position);
+    OrderProduct getOrderProduct(int position);
 
     void updateQuantity(int index, int quantity);
+
+    int orderListSize();
 }

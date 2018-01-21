@@ -5,7 +5,6 @@ import android.os.Parcelable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.soul.pr9_shop.R;
-import com.example.soul.pr9_shop.data.Repository;
+import com.example.soul.pr9_shop.data.local.Repository;
 import com.example.soul.pr9_shop.data.model.OrderProduct;
 import com.example.soul.pr9_shop.data.model.Product;
 import com.example.soul.pr9_shop.util.OrderUtils;

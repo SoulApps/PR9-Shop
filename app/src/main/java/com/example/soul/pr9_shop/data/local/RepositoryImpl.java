@@ -1,4 +1,4 @@
-package com.example.soul.pr9_shop.data;
+package com.example.soul.pr9_shop.data.local;
 
 import com.example.soul.pr9_shop.data.model.OrderProduct;
 import com.example.soul.pr9_shop.data.model.Product;
@@ -77,10 +77,15 @@ public class RepositoryImpl implements Repository {
 
 
     @Override
-    public void getOrderProduct(int position) { database.getOrderProduct(position); }
+    public OrderProduct getOrderProduct(int position) { return database.getOrderProduct(position); }
 
     @Override
     public void updateQuantity(int index, int quantity) {
         database.updateQuantity(index,quantity);
+    }
+
+    @Override
+    public int orderListSize() {
+        return database.getOrderList().size();
     }
 }

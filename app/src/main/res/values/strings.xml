@@ -7,4 +7,6 @@
     <string name="activity_order_lblCurrencyText">€</string>
     <string name="activity_order_btnConfirmOrderText">Confirm</string>
     <string name="mnu_goToCartTitle">Go to cart</string>
+    <string name="empty_view_lblMessageText">Empty cart. Please, add products</string>
+    <string name="activity_order_lblTotal">Total:</string>
 </resources>

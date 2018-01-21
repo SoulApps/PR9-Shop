@@ -12,7 +12,6 @@ import java.util.List;
 public class OrderUtils {
 
     // This method will check for each product in order list if exists
-    // TODO En el caso  que hubiera mas produdctos despues, del que hemos comprobado, paramos el metodo
     public static int increaseProductIfExists(Product product, List<OrderProduct> orderList) {
         boolean exists = false;
         int index = 0;
@@ -31,5 +30,16 @@ public class OrderUtils {
             index = -1;
         }
         return index;
+    }
+
+    // For each product, calculate the total price
+    public static float calculateTotal(List<OrderProduct> orderList){
+        float total = 0.0f;
+        float productPrice;
+        for (OrderProduct product: orderList) {
+            productPrice = product.getQuantity() * product.getProduct().getPrice();
+            total += productPrice;
+        }
+        return total;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.soul.pr9_shop.data;
+package com.example.soul.pr9_shop.data.local;
 
 import com.example.soul.pr9_shop.data.model.OrderProduct;
 import com.example.soul.pr9_shop.data.model.Product;
@@ -69,7 +69,7 @@ public class Database {
     }
 
     public void deleteFromOrder(int position) {
-        productList.remove(orderList);
+        orderList.remove(position);
     }
 
 
